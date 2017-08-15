@@ -1,0 +1,23 @@
+<div id = "container" layout = "column" ng-cloak>
+     <md-content>
+        <md-toolbar md-scroll-shrink style="background-color: #000000">
+           <div class = "md-toolbar-tools">
+              <h2>
+                 <span>Pop Movies</span>
+              </h2>
+
+              <span flex></span>
+              <md-button class = "md-icon-button" aria-label = "More">
+                 <md-icon class = "material-icons">more_vert</md-icon>
+              </md-button>
+           </div>
+        </md-toolbar>
+        <md-grid-list md-cols="10" md-cols-gt-md="10" md-cols-sm="2" md-cols-md="5" md-row-height="1:2">
+
+           <md-grid-tile ng-repeat= "movie in movies track by movie.id" index="movie.id">
+             <img ng-src="{{movie.image}}" layout-fill ng-click="display(movie.id)" style="cursor:pointer">
+           </md-grid-tile>
+
+        </md-grid-list>
+     </md-content>
+</div>

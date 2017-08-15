@@ -1,0 +1,62 @@
+<div id = "container" layout = "column" ng-cloak>
+     <md-content>
+        <md-toolbar md-scroll-shrink style="background-color: #000000">
+            <div class = "md-toolbar-tools">
+                <md-button ng-click="return()" style="cursor:pointer;">
+                   <md-icon class="material-icons">arrow_back</md-icon>
+                </md-button>
+                <h2 flex md-truncate>MovieDetails</h2>
+
+              <span flex></span>
+              <md-button class = "md-icon-button" aria-label = "More">
+                 <md-icon class = "material-icons">more_vert</md-icon>
+              </md-button>
+           </div>
+        </md-toolbar>
+         <md-toolbar md-scroll-shrink style="background-color: #009688">
+            <div class = "md-toolbar-tools">
+                <h2 flex md-truncate>{{data.title}}</h2>
+           </div>
+        </md-toolbar>
+     </md-content>
+    <div class="layout-content">
+        <div layout="row">
+            <div layout="column">
+                <img ng-src="{{data.image}}" class="poster">
+            </div>
+            <div layout="column" layout-padding>
+                <span class="year">{{data.date.split('-')[0]}}</span>
+                <span class="duration"><i>{{data.duration}} min</i></span>
+                <span class="rating">{{data.rating}}/10</span>
+                <div>
+                    <button class="markFavouriteBtn">
+                    MARK AS FAVORITE
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="overview">
+            <p class="text-style">{{data.overview}}</p>
+        </div>
+        <hr>
+        <span class="Trailers">Trailers:</span>
+        <div layout="row">
+            <div layout="column" class="Play-Arrow">
+                <md-icon class = "material-icons md-48" style="color: #000000">play_arrow</md-icon>
+            </div>
+            <div layout="column" class="Trailer">
+                <span>Trailer 1</span>
+            </div>
+        </div>
+        <hr>
+        <div layout="row">
+            <div layout="column" class="Play-Arrow">
+                <md-icon class = "material-icons md-48" style="color: #000000">play_arrow</md-icon>
+            </div>
+            <div layout="column" class="Trailer">
+                <span>Trailer 2</span>
+            </div>
+        </div>
+    </div>
+</div>
